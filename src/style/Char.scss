@@ -11,7 +11,7 @@ $--mobile-screen: 768px;
   width: 300px;
   height: 70px;
   @media screen and (max-width: $--mobile-screen) {
-    width: 200px;
+    width: 150px;
     height: 50px;
     top: 0;
   }
@@ -33,7 +33,9 @@ $--mobile-screen: 768px;
       width: 400px;
       height: 200px;
       @media screen and (max-width: $--mobile-screen) {
-        width: 350px;
+        margin: auto;
+        margin-top: 10px;
+        width: 250px;
         height: 300px;
       }
     }
