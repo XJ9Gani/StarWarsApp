@@ -1,0 +1,10 @@
+$--mobile-screen: 768px;
+.bg {
+  min-height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/45/f5/4b/45f54b2dde9196684f94c73858838c20.jpg");
+  background-size: cover;
+  @media screen and (max-width: $--mobile-screen) {
+    background-image: url("https://i.pinimg.com/736x/33/13/21/3313212b9e69a9f800058852d7f4d9f2.jpg");
+    background-size: contain;
+  }
+}

@@ -1,0 +1,50 @@
+$--mobile-screen: 768px;
+
+@mixin buttonProp() {
+  border: none;
+  position: fixed;
+  bottom: 0;
+  font-family: sans-serif;
+  background-color: #e4af03;
+  font-size: 20px;
+  color: black;
+  width: 300px;
+  height: 70px;
+  @media screen and (max-width: $--mobile-screen) {
+    width: 200px;
+    height: 50px;
+    top: 0;
+  }
+}
+
+.char {
+  &__container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (max-width: $--mobile-screen) {
+      padding-top: 50px;
+      grid-template-columns: 1fr;
+    }
+    &--item {
+      background-color: white;
+      list-style: none;
+      margin: 10px;
+      width: 400px;
+      height: 200px;
+      @media screen and (max-width: $--mobile-screen) {
+        width: 350px;
+        height: 300px;
+      }
+    }
+    &--prev {
+      @include buttonProp();
+      left: 0;
+    }
+    &--next {
+      @include buttonProp();
+
+      right: 0;
+    }
+  }
+}

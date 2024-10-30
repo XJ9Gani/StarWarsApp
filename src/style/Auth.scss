@@ -1,0 +1,55 @@
+$--mobile-screen: 768px;
+
+@mixin inputStyle() {
+  border-radius: 10px;
+  border: none;
+  width: 80%;
+  height: 10%;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  font-family: sans-serif;
+}
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  &__form {
+    border-radius: 10px;
+    background-color: rgba(94, 94, 94, 0.4);
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    @media screen and (max-width: $--mobile-screen) {
+      width: 300px;
+      height: 500px;
+    }
+    &--login {
+      @include inputStyle();
+    }
+    &--password {
+      @include inputStyle();
+    }
+    &--btn {
+      @include inputStyle();
+      background-color: #dfdfdf;
+      color: #1a1a1a;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
