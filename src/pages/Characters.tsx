@@ -46,8 +46,9 @@ export default function Characters() {
         <ul className="char__container">
           {characters.map(({ name }) => (
             <li key={name} className="char__container--item">
-              {name}
-              <NavLink to={`/entety`}>View</NavLink>
+              <NavLink to={`/entety`} className="name">
+                {name}
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -56,14 +57,14 @@ export default function Characters() {
           disabled={page <= 1}
           className="char__container--prev"
         >
-          Previous
+          <strong>❮</strong>
         </button>
         <button
           onClick={getNextPage}
           className="char__container--next"
           disabled={page >= 9}
         >
-          Next
+          <strong>❯</strong>
         </button>
       </section>
     </>

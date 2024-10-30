@@ -5,11 +5,12 @@ $--mobile-screen: 768px;
   position: fixed;
   bottom: 0;
   font-family: sans-serif;
-  background-color: #e4af03;
+  background-color: #2b2a2a;
   font-size: 20px;
-  color: black;
-  width: 300px;
-  height: 70px;
+  color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   @media screen and (max-width: $--mobile-screen) {
     width: 150px;
     height: 50px;
@@ -18,6 +19,7 @@ $--mobile-screen: 768px;
 }
 
 .char {
+  padding: 30px;
   &__container {
     margin: auto;
     display: grid;
@@ -27,7 +29,11 @@ $--mobile-screen: 768px;
       grid-template-columns: 1fr;
     }
     &--item {
-      background-color: white;
+      color: white;
+      box-shadow: 0 0 5px 2px white;
+      background-image: url("https://avatars.mds.yandex.net/i?id=ecf507771afba28f192fc0bf0a039a96_l-5330809-images-thumbs&n=13");
+      background-size: cover;
+      text-align: center;
       list-style: none;
       margin: 10px;
       width: 400px;
@@ -41,12 +47,19 @@ $--mobile-screen: 768px;
     }
     &--prev {
       @include buttonProp();
-      left: 0;
+      left: 45%;
     }
     &--next {
       @include buttonProp();
 
-      right: 0;
+      right: 45%;
     }
   }
+}
+
+.name {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
 }

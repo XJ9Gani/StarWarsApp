@@ -35,7 +35,7 @@ export default function Auth() {
     <>
       <section className="auth">
         <form onSubmit={handleSubmit(onSubmit)} className="auth__form">
-          <h2 className="text-center">Auth</h2>
+          <h2 className="title">Auth</h2>
 
           <input
             type="text"

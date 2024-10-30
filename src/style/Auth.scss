@@ -13,8 +13,8 @@ body {
   padding: 0;
 }
 
-h1 {
-  color: white;
+.title {
+  color: rgb(250, 250, 250);
   font-family: sans-serif;
 }
 .auth {
@@ -23,10 +23,17 @@ h1 {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-image: url("https://img.goodfon.com/original/1600x1200/6/73/freekandele-rodriguez-by-freekandele-rodriguez-risunok-fon-2.jpg");
+  background-size: cover;
+  @media screen and (max-width: $--mobile-screen) {
+    background-image: url("https://i.pinimg.com/736x/1e/e5/db/1ee5db138b9154a52cfb740dc9c5a236.jpg");
+    background-size: contain;
+  }
+
   &__form {
     border-radius: 10px;
-    background-color: rgba(94, 94, 94, 0.4);
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 1px 2px white;
     width: 400px;
     height: 600px;
     display: flex;
