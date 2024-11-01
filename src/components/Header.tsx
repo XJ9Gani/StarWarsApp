@@ -4,7 +4,7 @@ import { useCallback } from "react";
 export default function Header() {
   const activeLinkHandler = useCallback(
     ({ isActive }: any) =>
-      isActive ? `container__link active` : `container__link not-active`,
+      isActive ? `container__link link_active` : `container__link not-active`,
     []
   );
 

@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Приложение Star Wars
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Обзор
 
-Currently, two official plugins are available:
+Это веб-приложение на тему Star Wars, которое позволяет пользователям просматривать и редактировать информацию о персонажах, планетах и звездолетах из вселенной Star Wars. Приложение использует API Star Wars (SWAPI) для получения данных и предоставляет удобный интерфейс для взаимодействия.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Используемые технологии
 
-## Expanding the ESLint configuration
+- **React**: Библиотека JavaScript для создания пользовательских интерфейсов.
+- **TypeScript**: Супerset JavaScript, добавляющий статическую типизацию для улучшения процесса разработки.
+- **React Router**: Для обработки маршрутизации и навигации в приложении.
+- **SCSS**: Препроцессор CSS для написания более поддерживаемых и модульных стилей.
+- **AXIOS API**: Для выполнения HTTP-запросов к API Star Wars.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Особенности
 
-- Configure the top-level `parserOptions` property like this:
+- Просмотр подробной информации о персонажах, планетах и звездолетах.
+- Редактирование информации о персонажах и звездолетах через модальные формы.
+- Адаптивный дизайн для оптимального просмотра на различных устройствах.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Так как в API не было данных для картинов персонажей. Было установлена моковая картинка для красоты!
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Начало работы
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Предварительные требования
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Убедитесь, что у вас установлены следующие компоненты:
+
+- [Node.js](https://nodejs.org/) (версия 14 или выше)
+- [npm](https://www.npmjs.com/get-npm) (менеджер пакетов Node.js, обычно устанавливается вместе с Node.js)
+
+### Установка
+
+1. **Клонируйте репозиторий:**
+
+   ```bash
+   git clone https://github.com/yourusername/star-wars-app.git
+   ```
+
+2. **Клонируйте репозиторий:**
+
+   ```bash
+   cd star-wars-app
+   ```
+
+3. **Установите зависимости**
+   npm install
+
+4. **Запуск приложения**
+   Чтобы запустить приложение в режиме разработки, выполните: npm run dev
+
+## Вклад
+
+Ваши идеи и предложения по улучшениям приветствуются! Если у вас есть идеи для новых функций или улучшений, пожалуйста, создайте форк этого репозитория и отправьте пулл-запрос. Будем рады вашим предложениям!
+
+## Лицензия
+
+Этот проект лицензирован под лицензией MIT. Для получения подробной информации обратитесь к файлу [LICENSE](LICENSE).
+
+## Благодарности
+
+- Спасибо [SWAPI](https://swapi.dev/) за предоставление данных API Star Wars.
+- Благодарим франшизу Star Wars за вдохновение и богатую вселенную, на основе которой создано это приложение.

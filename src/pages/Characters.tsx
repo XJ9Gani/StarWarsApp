@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Loader } from "../components";
 import "../style/Char.scss";
 import { NavLink } from "react-router-dom";
+import Character from "../types/character";
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
@@ -27,8 +28,6 @@ export default function Characters() {
     fetchData();
   }, [page]);
 
-  console.log(characters);
-
   const getPrevPage = useCallback(() => {
     setPage(page - 1);
     setLoading(true);
@@ -44,10 +43,10 @@ export default function Characters() {
     <>
       <section className="char">
         <ul className="char__container">
-          {characters.map(({ name }) => (
-            <li key={name} className="char__container--item">
-              <NavLink to={`/entety`} className="name">
-                {name}
+          {characters.map((character: Character, index) => (
+            <li key={character.name} className="char__container--item">
+              <NavLink to={`/character/${index + 1}`} className="name">
+                {character.name}
               </NavLink>
             </li>
           ))}

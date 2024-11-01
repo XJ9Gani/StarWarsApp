@@ -12,7 +12,7 @@ export default function Loader() {
           >
             <span className="visually-hidden text-primary">Loading...</span>
           </Spinner>
-          <div style={{ color: "rgb(126, 36, 36)", fontSize: "20px" }}>
+          <div style={{ fontSize: "20px", color: "white" }}>
             Loading, please wait...
           </div>
         </Col>

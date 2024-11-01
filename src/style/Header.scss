@@ -19,7 +19,6 @@ header {
 
   @media (max-width: $--mobile-screen) {
     position: fixed;
-
     bottom: 0;
   }
 
@@ -38,7 +37,7 @@ header {
   }
 }
 
-.active {
+.link_active {
   border-radius: 10px;
   color: rgb(49, 49, 49);
 }
